@@ -1,11 +1,7 @@
 Flask
 gunicorn
-tensorflow
-python-dotenv
 requests
 openai
-nltk
-scikit-learn
-numpy
-pandas
+python-dotenv
+
 
