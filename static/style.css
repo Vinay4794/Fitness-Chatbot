@@ -1,0 +1,380 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    font-family: "Segoe UI", sans-serif;
+
+    background: radial-gradient(
+        circle at top left,
+        #020617 0%,
+        #020617 40%,
+        #020617 100%
+    );
+}
+
+
+/* MAIN HORIZONTAL LAYOUT */
+.main-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* LEFT PANEL */
+.card-panel {
+    width: 45%;
+    padding: 20px;
+    background: #020617;
+}
+
+.card-panel h2 {
+    margin-bottom: 15px;
+    color: #4caf50;
+}
+
+.image-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.img-card {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.35s ease;
+}
+
+.img-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.65),
+        rgba(0,0,0,0.1)
+    );
+}
+
+.img-card:hover {
+    transform: translateY(-6px) scale(1.03);
+}
+
+.img-card span {
+    z-index: 2;
+}
+
+
+.img-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-card span {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: rgba(0,0,0,0.6);
+    padding: 6px;
+    font-weight: bold;
+}
+
+.img-card:hover {
+    transform: scale(1.05);
+}
+
+/* RIGHT CHAT PANEL */
+
+    .chat-panel {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    background: #020617;
+    padding: 15px;
+    border-radius: 18px;
+
+    /* NEW BORDER */
+    border: 2px solid #22c55e;
+    box-shadow: 0 0 25px rgba(34,197,94,0.25);
+
+    margin: 20px;
+}
+
+.chat-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 10px;
+}
+
+.chat-header img {
+    width: 45px;
+    margin-right: 10px;
+}
+
+#chat-box {
+    flex: 1;
+    overflow-y: auto;
+    margin: 15px 0;
+}
+.chat-box-wrapper {
+    background: linear-gradient(
+        180deg,
+        rgba(2,6,23,0.9),
+        rgba(2,6,23,0.98)
+    );
+
+    border-radius: 22px;
+    border: 2px solid rgba(34,197,94,0.8);
+
+    box-shadow:
+        0 0 40px rgba(34,197,94,0.35),
+        inset 0 0 20px rgba(34,197,94,0.05);
+}
+.user span,
+.bot span {
+    border-radius: 16px;
+    line-height: 1.4;
+}
+
+.user span {
+    box-shadow: 0 4px 12px rgba(34,197,94,0.25);
+}
+
+.bot span {
+    box-shadow: 0 4px 12px rgba(30,64,175,0.25);
+}
+button {
+    transition: all 0.25s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(34,197,94,0.4);
+}
+
+
+.user, .bot {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.user {
+    justify-content: flex-end;
+}
+
+.bot {
+    justify-content: flex-start;
+}
+
+.user img, .bot img {
+    width: 28px;
+    margin: 0 8px;
+}
+
+.user span {
+    background: #4caf50;
+    color: black;
+    padding: 8px 12px;
+    border-radius: 12px;
+}
+
+.bot span {
+    background: #1e40af;
+    padding: 8px 12px;
+    border-radius: 12px;
+}
+
+form {
+    display: flex;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+button {
+    background: #4caf50;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+@keyframes glow {
+    0% { box-shadow: 0 0 15px rgba(34,197,94,0.2); }
+    50% { box-shadow: 0 0 30px rgba(34,197,94,0.45); }
+    100% { box-shadow: 0 0 15px rgba(34,197,94,0.2); }
+}
+
+.img-card:hover {
+    animation: glow 1.5s infinite;
+}
+.img-card {
+    position: relative;
+    height: 160px;
+    border-radius: 18px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+.img-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.85) contrast(1.1);
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.img-card span {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: #ffffff;
+}
+
+/* Hover Effect */
+.img-card:hover img {
+    transform: scale(1.08);
+    filter: brightness(1) contrast(1.15);
+}
+
+.img-card:hover {
+    box-shadow: 0 0 35px rgba(34,197,94,0.45);
+}
+@keyframes pageFade {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.main-container {
+    animation: pageFade 0.8s ease-out;
+}
+.img-card img {
+    filter: contrast(1.15) saturate(1.1);
+    transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.img-card:hover img {
+    filter: contrast(1.2) saturate(1.2);
+}
+/* Chatbot Header Text Visibility Fix */
+.chat-header h2 {
+    color: #22c55e;           /* Bright green */
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.chat-header small {
+    color: #60a5fa;           /* Soft blue */
+    font-weight: 500;
+}
+
+/* Optional: add a tiny status dot */
+.chat-header small::before {
+    content: "● ";
+    color: #22c55e;
+}
+/* BMI MODAL */
+.bmi-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.bmi-box {
+    background: #020617;
+    padding: 25px;
+    width: 300px;
+    border-radius: 15px;
+    border: 2px solid #22c55e;
+    box-shadow: 0 0 30px rgba(34,197,94,0.4);
+    text-align: center;
+    position: relative;
+}
+
+.bmi-box h3 {
+    color: #22c55e;
+    margin-bottom: 15px;
+}
+
+.bmi-box input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: none;
+}
+
+.bmi-box button {
+    width: 100%;
+    background: #22c55e;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#bmi-result {
+    margin-top: 10px;
+    color: #60a5fa;
+}
+
+.close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    cursor: pointer;
+    color: white;
+}
+/* Floating BMI Icon - Left Bottom */
+.bmi-icon {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;        /* LEFT side now */
+    width: 55px;
+    height: 55px;
+    background: #22c55e;
+    color: #020617;
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 25px rgba(34,197,94,0.6);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.bmi-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 35px rgba(34,197,94,0.9);
+}
+

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fitness Chatbot</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="main-container">
+
+    <!-- LEFT PANEL -->
+    <div class="card-panel">
+        <h2>Fitness Hub</h2>
+
+        <div class="image-cards">
+            <div class="img-card" onclick="sendQuick('workout plan')">
+                <img src="https://images.unsplash.com/photo-1517963879433-6ad2b056d712?auto=format&fit=crop&w=1200&q=90">
+                <span>Workout</span>
+            </div>
+
+            <div class="img-card" onclick="sendQuick('diet plan')">
+                <img src="https://images.unsplash.com/photo-1543353071-873f17a7a088?auto=format&fit=crop&w=1200&q=90">
+                <span>Diet</span>
+            </div>
+
+            <div class="img-card" onclick="sendQuick('motivate me')">
+                <img src="https://images.unsplash.com/photo-1508215885820-4585e56135c8?auto=format&fit=crop&w=1200&q=90">
+                <span>Motivation</span>
+            </div>
+
+            <div class="img-card" onclick="sendQuick('cardio exercises')">
+                <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=1200&q=90">
+                <span>Cardio</span>
+            </div>
+
+            <div class="img-card" onclick="sendQuick('yoga exercises')">
+                <img src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3?auto=format&fit=crop&w=1200&q=90">
+                <span>Yoga</span>
+            </div>
+
+            <!-- NEW BMI GUIDE CARD -->
+            <div class="img-card" onclick="sendQuick('bmi guide')">
+                <img src="https://images.unsplash.com/photo-1549576490-b0b4831ef60a?auto=format&fit=crop&w=1200&q=90">
+                <span>BMI Guide</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="chat-panel">
+        <div class="chat-header">
+            <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png">
+            <div>
+                <h2>Fitness Coach Bot</h2>
+                <small>Online</small>
+            </div>
+        </div>
+
+        <div id="chat-box"></div>
+
+        <form id="chat-form">
+            <input type="text" id="user-input" placeholder="Ask your fitness coach..." required>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+</div>
+
+<script>
+/* ===== CHATBOT CODE ===== */
+
+const chatBox = document.getElementById("chat-box");
+
+function addMessage(msg, type, img) {
+    const div = document.createElement("div");
+    div.className = type;
+    div.innerHTML = `<img src="${img}"><span>${msg}</span>`;
+    chatBox.appendChild(div);
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+async function sendMessage(message) {
+    addMessage(
+        message,
+        "user",
+        "https://cdn-icons-png.flaticon.com/512/149/149071.png"
+    );
+
+    const response = await fetch("/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message })
+    });
+
+    const data = await response.json();
+
+    addMessage(
+        data.reply,
+        "bot",
+        "https://cdn-icons-png.flaticon.com/512/4712/4712109.png"
+    );
+}
+
+document.getElementById("chat-form").onsubmit = e => {
+    e.preventDefault();
+    const input = document.getElementById("user-input");
+    sendMessage(input.value);
+    input.value = "";
+};
+
+function sendQuick(text) {
+    sendMessage(text);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,670 @@
+{
+  "intents": [
+
+    {
+      "tag": "greeting",
+      "patterns": [
+        "hi",
+        "hello",
+        "hey",
+        "good morning",
+        "good evening",
+        "how are you"
+      ],
+      "responses": [
+        "Hello! How can I help you with your fitness today?",
+        "Hi there! Ask me anything about fitness or health."
+      ]
+    },
+
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "bye",
+        "goodbye",
+        "see you",
+        "exit",
+        "quit"
+      ],
+      "responses": [
+        "Goodbye! Stay healthy and active.",
+        "See you soon. Keep taking care of your fitness."
+      ]
+    },
+
+    {
+      "tag": "thanks",
+      "patterns": [
+        "thank you",
+        "thanks",
+        "thanks a lot",
+        "appreciate it"
+      ],
+      "responses": [
+        "You're welcome!",
+        "Happy to help.",
+        "Anytime! Stay fit."
+      ]
+    },
+
+    {
+      "tag": "help",
+      "patterns": [
+        "help",
+        "what can you do",
+        "how can you help me",
+        "features of this chatbot"
+      ],
+      "responses": [
+        "I can help you with workouts, diet plans, fitness tips, and healthy habits.",
+        "You can ask me about exercises, nutrition, or daily fitness routines."
+      ]
+    },
+
+    {
+      "tag": "daily_fitness_questions",
+      "patterns": [
+        "is walking enough",
+        "is gym necessary",
+        "can i exercise at home",
+        "can i workout daily",
+        "how long should i exercise",
+        "how often should i workout"
+      ],
+      "responses": [
+        "Walking is a good start, but combining cardio and strength gives better results.",
+        "You can stay fit at home with regular bodyweight exercises."
+      ]
+    },
+
+    {
+      "tag": "morning_vs_evening_workout",
+      "patterns": [
+        "morning workout or evening workout",
+        "best time to workout",
+        "is morning workout better",
+        "is evening workout okay"
+      ],
+      "responses": [
+        "Both morning and evening workouts are effective.",
+        "Choose a time you can follow consistently."
+      ]
+    },
+
+    {
+      "tag": "low_energy",
+      "patterns": [
+        "i feel tired",
+        "low energy",
+        "feeling weak",
+        "no energy to workout"
+      ],
+      "responses": [
+        "Low energy can be due to poor sleep, dehydration, or low nutrition.",
+        "Balanced meals, enough water, and proper sleep help improve energy."
+      ]
+    },
+
+    {
+      "tag": "fitness_for_beginners",
+      "patterns": [
+        "i am new to fitness",
+        "how to start fitness",
+        "beginner workout",
+        "exercise for beginners"
+      ],
+      "responses": [
+        "Start with light exercises and focus on consistency.",
+        "Walking, stretching, and basic bodyweight exercises are good for beginners."
+      ]
+    },
+
+    {
+      "tag": "weight_loss_common",
+      "patterns": [
+        "how to lose weight",
+        "weight loss tips",
+        "fat loss",
+        "reduce belly fat"
+      ],
+      "responses": [
+        "Weight loss requires calorie control, regular exercise, and consistency.",
+        "Avoid junk food and stay physically active."
+      ]
+    },
+
+    {
+      "tag": "weight_gain_common",
+      "patterns": [
+        "how to gain weight",
+        "weight gain tips",
+        "muscle gain",
+        "bulk up"
+      ],
+      "responses": [
+        "Weight gain requires calorie surplus with nutritious food.",
+        "Strength training helps gain healthy muscle mass."
+      ]
+    },
+
+    {
+      "tag": "diet_common",
+      "patterns": [
+        "diet plan",
+        "healthy diet",
+        "what should i eat",
+        "balanced diet"
+      ],
+      "responses": [
+        "A healthy diet includes carbohydrates, protein, healthy fats, fruits, and vegetables.",
+        "Eating balanced meals supports energy and recovery."
+      ]
+    },
+
+    {
+      "tag": "hydration_common",
+      "patterns": [
+        "how much water should i drink",
+        "water intake",
+        "importance of water"
+      ],
+      "responses": [
+        "Drink at least 2-3 liters of water daily.",
+        "Proper hydration improves digestion and performance."
+      ]
+    },
+
+    {
+      "tag": "sleep_common",
+      "patterns": [
+        "how much sleep is needed",
+        "importance of sleep",
+        "sleep and fitness"
+      ],
+      "responses": [
+        "7-9 hours of sleep is essential for recovery and health.",
+        "Poor sleep affects fitness progress."
+      ]
+    },
+
+    {
+      "tag": "motivation_common",
+      "patterns": [
+        "motivate me",
+        "i feel lazy",
+        "no motivation to workout"
+      ],
+      "responses": [
+        "Consistency is more important than motivation.",
+        "Start small and stay regular."
+      ]
+    },
+
+    {
+      "tag": "fitness_myths_common",
+      "patterns": [
+        "does sweating burn fat",
+        "is skipping meals good",
+        "do weights make you bulky"
+      ],
+      "responses": [
+        "Sweating does not equal fat loss.",
+        "Skipping meals is unhealthy.",
+        "Strength training does not automatically make you bulky."
+      ]
+    },
+
+    {
+      "tag": "fitness_definition",
+      "patterns": ["what is fitness", "define fitness"],
+      "responses": [
+        "Fitness means overall physical, mental, and emotional well-being.",
+        "It includes strength, endurance, flexibility, and balance."
+      ]
+    },
+
+    {
+      "tag": "fitness_importance",
+      "patterns": ["why fitness is important", "importance of fitness"],
+      "responses": [
+        "Fitness improves heart health, immunity, strength, and mental health.",
+        "Regular activity reduces stress and lifestyle diseases."
+      ]
+    },
+
+    {
+      "tag": "beginner_exercises",
+      "patterns": ["beginner exercises", "workout for beginners", "easy exercises"],
+      "responses": [
+        "Beginner exercises focus on learning correct form and consistency.",
+        "Examples: walking, jumping jacks, bodyweight squats, wall push-ups, knee push-ups, basic stretching."
+      ]
+    },
+
+    {
+      "tag": "intermediate_exercises",
+      "patterns": ["intermediate exercises", "intermediate workout"],
+      "responses": [
+        "Intermediate exercises increase intensity and volume.",
+        "Examples: push-ups, lunges, plank holds, pull-ups, dumbbell squats, mountain climbers."
+      ]
+    },
+
+    {
+      "tag": "advanced_exercises",
+      "patterns": ["advanced exercises", "advanced workout"],
+      "responses": [
+        "Advanced exercises require strength, balance, and endurance.",
+        "Examples: deadlifts, bench press, overhead press, pistol squats, muscle-ups, burpees."
+      ]
+    },
+
+    {
+      "tag": "chest_exercises",
+      "patterns": ["chest exercises", "chest workout"],
+      "responses": [
+        "Chest exercises target the pectoral muscles.",
+        "Exercises: push-ups, bench press, incline bench press, chest fly, dumbbell press."
+      ]
+    },
+
+    {
+      "tag": "back_exercises",
+      "patterns": ["back exercises", "back workout"],
+      "responses": [
+        "Back exercises strengthen upper and lower back muscles.",
+        "Exercises: pull-ups, lat pull-down, seated rows, deadlifts, bent-over rows."
+      ]
+    },
+
+    {
+      "tag": "shoulder_exercises",
+      "patterns": ["shoulder exercises", "shoulder workout"],
+      "responses": [
+        "Shoulder exercises target the deltoid muscles.",
+        "Exercises: overhead press, lateral raises, front raises, rear delt fly."
+      ]
+    },
+
+    {
+      "tag": "arm_exercises",
+      "patterns": ["arm exercises", "biceps workout", "triceps workout"],
+      "responses": [
+        "Arm workouts target biceps and triceps.",
+        "Exercises: bicep curls, hammer curls, tricep dips, tricep pushdowns, skull crushers."
+      ]
+    },
+
+    {
+      "tag": "leg_exercises",
+      "patterns": ["leg exercises", "leg workout"],
+      "responses": [
+        "Leg exercises strengthen quads, hamstrings, and glutes.",
+        "Exercises: squats, lunges, leg press, calf raises, hamstring curls."
+      ]
+    },
+
+    {
+      "tag": "core_exercises",
+      "patterns": ["core exercises", "abs workout"],
+      "responses": [
+        "Core exercises strengthen abdominal and lower back muscles.",
+        "Exercises: planks, crunches, leg raises, Russian twists, bicycle crunches."
+      ]
+    },
+
+    {
+      "tag": "cardio_exercises",
+      "patterns": ["cardio exercises", "cardio workout"],
+      "responses": [
+        "Cardio exercises improve heart health and endurance.",
+        "Examples: running, cycling, skipping rope, jumping jacks, stair climbing."
+      ]
+    },
+
+    {
+      "tag": "yoga_exercises",
+      "patterns": ["yoga exercises", "yoga poses"],
+      "responses": [
+        "Yoga improves flexibility, balance, and mental calmness.",
+        "Poses: Surya Namaskar, Tree Pose, Cobra Pose, Warrior Pose, Child’s Pose."
+      ]
+    },
+
+    {
+      "tag": "diet_general",
+      "patterns": ["diet plan", "healthy diet","give me a diet plan"],
+      "responses": [
+        "A healthy diet includes carbohydrates, protein, healthy fats, vitamins, and minerals."
+      ]
+    },
+
+    {
+      "tag": "diet_weight_loss",
+      "patterns": ["diet for weight loss", "fat loss diet","weight loss diet","give me a diet plan for weight loss"],
+      "responses": [
+        "Weight loss requires calorie control and regular exercise.",
+        "Focus on vegetables, lean protein, and whole foods."
+      ]
+    },
+
+    {
+      "tag": "diet_weight_gain",
+      "patterns": ["diet for weight gain", "muscle gain diet","weight gain diet plan","give me a diet plan for weight gain"],
+      "responses": [
+        "Weight gain requires a calorie surplus with quality food.",
+        "Include complex carbs, protein, and healthy fats."
+      ]
+    },
+
+
+    {
+      "tag": "protein_rich_diet",
+      "patterns": ["protein rich diet", "high protein foods"],
+      "responses": [
+        "Protein-rich foods support muscle growth and recovery.",
+        "Veg sources: lentils, beans, paneer, tofu, soybeans, nuts.",
+        "Non-veg sources: eggs, chicken breast, fish, lean meat."
+      ]
+    },
+
+    {
+      "tag": "daily_protein_requirement",
+      "patterns": ["how much protein per day", "daily protein intake", "protein requirement","protein intake per day"],
+      "responses": [
+        "Protein needs depend on activity level.",
+        "Average requirement is 0.8-2.0 grams per kg body weight."
+      ]
+    },
+
+
+    {
+      "tag": "sleep_recovery",
+      "patterns": ["importance of sleep", "recovery time",
+        "why sleep is important", "how much should i sleep"],
+      "responses": [
+        "Sleep is essential for muscle recovery and growth.",
+        "7-9 hours of sleep is recommended."
+      ]
+    },
+
+    {
+      "tag": "rest_days",
+      "patterns": ["rest days", "why rest is important"],
+      "responses": [
+        "Rest days prevent injury and improve performance.",
+        "Muscles grow during recovery, not during workouts."
+      ]
+    },
+
+    {
+      "tag": "fitness_motivation",
+      "patterns": ["motivate me", "fitness motivation","give me some motivation"],
+      "responses": [
+        "Consistency is more important than intensity.",
+        "Small daily progress leads to long-term success."
+      ]
+    },
+
+    {
+      "tag": "daily_fitness_questions",
+      "patterns": [
+        "is walking enough",
+        "is gym necessary",
+        "can i exercise at home",
+        "is morning workout better",
+        "is evening workout okay",
+        "can i workout daily",
+        "how long should i exercise",
+        "how much should i walk"
+      ],
+      "responses": [
+        "Walking is a good start, but strength and cardio together give best results.",
+        "You can stay fit at home without a gym using bodyweight exercises.",
+        "Morning and evening workouts are both effective if done consistently."
+      ]
+    },
+
+    {
+      "tag": "daily_energy_fatigue",
+      "patterns": [
+        "i feel tired all day",
+        "low energy",
+        "no energy to workout",
+        "feeling weak",
+        "why am i always tired"
+      ],
+      "responses": [
+        "Low energy may be due to poor sleep, low nutrition, or dehydration.",
+        "Balanced meals, water intake, and regular sleep improve energy."
+      ]
+    },
+
+    {
+      "tag": "daily_habits",
+      "patterns": [
+        "healthy daily habits",
+        "fitness routine",
+        "how to stay active daily"
+      ],
+      "responses": [
+        "Daily activity, regular meals, good sleep, and hydration build fitness.",
+        "Small habits done daily matter more than intense workouts."
+      ]
+    },
+
+
+    {
+      "tag": "exercise_levels",
+      "patterns": [
+        "beginner intermediate advanced exercises",
+        "exercise levels explained"
+      ],
+      "responses": [
+        "Beginner exercises focus on form and mobility.",
+        "Intermediate exercises add resistance and volume.",
+        "Advanced exercises focus on strength, endurance, and control."
+      ]
+    },
+
+    {
+      "tag": "body_part_exercises_detailed",
+      "patterns": [
+        "which exercise for which body part",
+        "body part workout",
+        "exercise for full body",
+        "list of exercises for each part of body"
+      ],
+      "responses": [
+        "Chest: push-ups, bench press, chest fly.",
+        "Back: pull-ups, rows, deadlifts.",
+        "Legs: squats, lunges, leg press.",
+        "Arms: bicep curls, tricep dips.",
+        "Core: planks, crunches, leg raises.",
+        "Shoulders: overhead press, lateral raises."
+      ]
+    },
+
+    {
+      "tag": "food_nutrients_overview",
+      "patterns": [
+        "what nutrients food contains",
+        "food nutrients",
+        "nutrition in food",
+        "what food contains",
+        "what does food provide to our body"
+      ],
+      "responses": [
+        "Food provides carbohydrates, protein, fats, vitamins, and minerals.",
+        "Each nutrient supports energy, growth, and recovery."
+      ]
+    },
+
+    {
+      "tag": "protein_foods_detailed",
+      "patterns": [
+        "protein foods list",
+        "foods rich in protein",
+        "what foods contain protein",
+        "protein rich foods"
+      ],
+      "responses": [
+        "Protein foods help muscle repair and growth.",
+        "Eggs: high-quality protein.",
+        "Chicken and fish: lean protein.",
+        "Paneer, tofu, lentils, beans: plant protein.",
+        "Nuts and seeds: moderate protein with healthy fats."
+      ]
+    },
+
+    {
+      "tag": "carbohydrate_foods",
+      "patterns": [
+        "carbohydrate foods",
+        "foods rich in carbs",
+        "what gives energy",
+        "carb sources",
+        "carbohydrate sources"
+      ],
+      "responses": [
+        "Carbohydrates provide energy.",
+        "Rice, roti, oats, fruits, potatoes, and grains are carb sources."
+      ]
+    },
+
+    {
+      "tag": "fat_foods",
+      "patterns": [
+        "healthy fats",
+        "fat rich foods",
+        "foods with good fats"
+      ],
+      "responses": [
+        "Healthy fats support hormones and brain function.",
+        "Sources include nuts, seeds, olive oil, avocado, and fish."
+      ]
+    },
+
+    {
+      "tag": "vitamin_minerals",
+      "patterns": [
+        "vitamins in food",
+        "minerals in food",
+        "why vitamins important"
+      ],
+      "responses": [
+        "Vitamins and minerals support immunity and metabolism.",
+        "Fruits and vegetables are rich in vitamins.",
+        "Milk, nuts, and leafy greens provide minerals like calcium and iron."
+      ]
+    },
+
+    {
+      "tag": "meal_timing",
+      "patterns": [
+        "best time to eat",
+        "meal timing",
+        "how many meals a day",
+        "when to eat meals",
+        "how often to eat"
+      ],
+      "responses": [
+        "3 main meals and 1-2 healthy snacks work well for most people.",
+        "Avoid heavy meals late at night."
+      ]
+    },
+
+    {
+      "tag": "pre_post_workout_food",
+      "patterns": [
+        "what to eat before workout",
+        "what to eat after workout",
+        "preworkout meal",
+        "postworkout meal"
+      ],
+      "responses": [
+        "Before workout: light carbs and protein.",
+        "After workout: protein and carbohydrates for recovery."
+      ]
+    },
+
+    {
+      "tag": "weight_loss_daily",
+      "patterns": [
+        "how to lose weight daily",
+        "weight loss tips",
+        "fat loss routine"
+      ],
+      "responses": [
+        "Weight loss needs calorie control, movement, and consistency.",
+        "Avoid sugary drinks and junk food."
+      ]
+    },
+
+    {
+      "tag": "weight_gain_daily",
+      "patterns": [
+        "how to gain weight safely",
+        "weight gain tips"
+      ],
+      "responses": [
+        "Weight gain requires calorie surplus with nutritious food.",
+        "Combine diet with strength training."
+      ]
+    },
+
+    {
+      "tag": "sleep_daily",
+      "patterns": [
+        "how much sleep needed",
+        "sleep and fitness",
+        "how much should i sleep"
+      ],
+      "responses": [
+        "7-9 hours of sleep supports recovery and energy.",
+        "Poor sleep affects performance and health."
+      ]
+    },
+
+    {
+      "tag": "stress_daily",
+      "patterns": [
+        "stress in daily life",
+        "how to reduce stress"
+      ],
+      "responses": [
+        "Exercise, breathing, and sleep help manage stress.",
+        "Physical activity improves mental clarity."
+      ]
+    },
+
+    {
+      "tag": "fitness_myths",
+      "patterns": [
+        "do weights make you bulky",
+        "is sweating equal to fat loss",
+        "does skipping meals help"
+      ],
+      "responses": [
+        "Sweating does not equal fat loss.",
+        "Skipping meals is unhealthy.",
+        "Strength training does not make everyone bulky."
+      ]
+    },
+
+    {
+      "tag": "motivation_consistency",
+      "patterns": [
+        "how to stay consistent",
+        "i feel lazy",
+        "no motivation to workout"
+      ],
+      "responses": [
+        "Discipline is more important than motivation.",
+        "Start small and stay consistent."
+      ]
+    }
+
+  ]
+}
+
