@@ -1,4 +1,10 @@
-flask
-tensorflow
-numpy
+Flask
+gunicorn
+python-dotenv
+requests
+openai
+nltk
 scikit-learn
+numpy
+pandas
+
