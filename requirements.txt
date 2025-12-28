@@ -3,5 +3,7 @@ gunicorn
 requests
 openai
 python-dotenv
-
+tensorflow
+numpy
+pandas
 
